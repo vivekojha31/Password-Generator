@@ -1,0 +1,312 @@
+.title {
+    text-align: center;
+    margin-bottom: 8px;
+
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #eef4ff,
+        #dce9ff
+    );
+
+    color: #111827;
+}
+
+
+/* Main container */
+
+body > div {
+    width: 430px;
+    padding: 32px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(70, 100, 160, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+
+/* Heading / Password */
+
+#newPass {
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px 18px;
+
+    margin-bottom: 25px;
+
+    background: #f5f8fd;
+
+    border: 1px solid #dce4ef;
+
+    border-radius: 15px;
+
+    color: #111827;
+
+    font-size: 23px;
+
+    letter-spacing: 1.5px;
+
+    word-break: break-all;
+}
+
+
+/* Copy button */
+
+.password-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.password-box #newPass {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+#copyBtn {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #dce4ef;
+
+    border-radius: 14px;
+
+    background: white;
+
+    color: #2563eb;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s ease;
+}
+
+#copyBtn:hover {
+    background: #eff6ff;
+    border-color: #2563eb;
+}
+
+#copyBtn:active {
+    transform: scale(0.94);
+}
+
+
+/* Slider */
+
+#range {
+    width: 100%;
+
+    appearance: none;
+
+    height: 6px;
+
+    border-radius: 10px;
+
+    background: #dbe5f5;
+
+    outline: none;
+
+    margin: 8px 0 10px;
+}
+
+
+/* Slider thumb */
+
+#range::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    border: 3px solid white;
+
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+
+    cursor: pointer;
+}
+
+
+/* Range value */
+
+#rangeVal {
+    text-align: right;
+
+    margin-bottom: 25px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* Checkbox section */
+
+body > div > div {
+    margin-bottom: 25px;
+}
+
+
+/* Checkbox */
+
+input[type="checkbox"] {
+    appearance: none;
+
+    width: 18px;
+    height: 18px;
+
+    border: 1.5px solid #cbd5e1;
+
+    border-radius: 5px;
+
+    vertical-align: middle;
+
+    margin-right: 8px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    background: white;
+}
+
+input[type="checkbox"]:checked {
+    background: #2563eb;
+
+    border-color: #2563eb;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✓";
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    left: 3px;
+    top: 0px;
+}
+
+
+/* Labels */
+
+label {
+    color: #334155;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+/* Generate button */
+
+#genPass {
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
+}
+
+#genPass:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+#genPass:active {
+    transform: scale(0.98);
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px;
+    }
+
+    body > div {
+        width: 100%;
+        padding: 25px;
+    }
+
+    #newPass {
+        font-size: 18px;
+    }
+}
